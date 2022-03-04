@@ -80,6 +80,11 @@ p {
   background-color: #fff;
 }
 
+.btn:hover {
+  box-shadow: 0px 0px 20px 2px hsl(150, 100%, 66%);
+  transition: 0.3s ease-in-out;
+}
+
 .btn-divider {
   background-color: transparent;
   border: none;
