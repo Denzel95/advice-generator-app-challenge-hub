@@ -73,3 +73,7 @@ p {
   bottom: 0;
   transform: translate(-50%, 50%);
 }
+
+.btn:active {
+  background-color: #fff;
+}
