@@ -16,6 +16,7 @@ let TOOLTIP_STATE = false;
  * @returns This function fetch data then returns a object
  */
 const getAdvice = async function (state = true, id) {
+  console.log(id);
   try {
     let res;
     if (state)
@@ -43,12 +44,13 @@ const renderData = async function (state = true, id) {
     if (state) data = await getAdvice();
     else data = await getAdvice(false, id);
 
+    console.log(id);
     paragraph.innerHTML = data.slip.advice;
     h1Id.innerHTML = `Advice #${data.slip.id}`;
   } catch (error) {
     console.log(error);
     h1Id.style.color = "red";
-    h1Id.innerHTML = "Max number of advices for now is 224";
+    h1Id.innerHTML = error.message;
     setTimeout(function () {
       window.location.reload();
     }, 3000);
