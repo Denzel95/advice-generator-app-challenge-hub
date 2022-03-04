@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  background-color: hsl(217, 19%, 24%);
+  background-color: #323a49;
   display: flex;
   flex-direction: column;
   width: 52rem;
@@ -97,6 +97,7 @@ p {
 
 .label-id {
   margin-right: 1rem;
+  color: #aab4c5;
 }
 
 .input-id {
