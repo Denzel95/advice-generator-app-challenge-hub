@@ -86,9 +86,36 @@ p {
 }
 
 .btn-divider {
+  position: relative;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  font-size: 1.2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.207);
+  padding: 1rem;
+  width: 15rem;
+  height: 6rem;
+
+  top: 0;
+  right: 0;
+  transform: translate(-120%, 55%);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(7.3rem, -1.5rem);
+  margin-left: -0.8rem;
+  border-width: 0.8rem;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.207) transparent;
 }
 
 .form-id {

@@ -4,8 +4,10 @@ const paragraph = document.querySelector(".advice-paragraph");
 const h1Id = document.querySelector(".advice-id");
 const form = document.querySelector(".form-id");
 const input = document.querySelector(".input-id");
+const tooltip = document.querySelector(".tooltip");
 
 const API_URL = "https://api.adviceslip.com/advice";
+let TOOLTIP_STATE = false;
 
 /**
  *
@@ -54,12 +56,18 @@ const renderData = async function (state = true, id) {
   }
 };
 
-const toogleForm = function () {
-  form.classList.toggle("hidden");
+const toggleHidden = function (elementClass) {
+  elementClass.classList.toggle("hidden");
 };
 
 btnShow.addEventListener("click", function () {
-  toogleForm();
+  TOOLTIP_STATE = true;
+  if (!tooltip.classList.contains("hidden")) tooltip.classList.add("hidden");
+  toggleHidden(form);
+});
+
+btnShow.addEventListener("mouseover", function () {
+  if (!TOOLTIP_STATE) toggleHidden(tooltip);
 });
 
 form.addEventListener("submit", function (e) {
@@ -67,7 +75,10 @@ form.addEventListener("submit", function (e) {
   const id = input.value;
   input.value = "";
   renderData(false, id);
-  toogleForm();
+  toggleHidden(form);
+  TOOLTIP_STATE = false;
+
+  //   if (!tooltip.classList.contains("hidden")) tooltip.classList.remove("hidden");
 });
 
 // const requestAdviceById = async function (id) {};
