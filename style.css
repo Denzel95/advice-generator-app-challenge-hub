@@ -25,7 +25,7 @@ body {
   background-color: hsl(217, 19%, 24%);
   display: flex;
   flex-direction: column;
-  max-width: 52rem;
+  width: 52rem;
   height: 32rem;
   border-radius: 10px;
   position: relative;
@@ -48,8 +48,10 @@ p {
 
 .img-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding-top: 3.2rem;
+  gap: 3.2rem;
 }
 
 .dice {
@@ -76,4 +78,26 @@ p {
 
 .btn:active {
   background-color: #fff;
+}
+
+.btn-divider {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.form-id {
+  font-size: 1.4rem;
+}
+
+.label-id {
+  margin-right: 1rem;
+}
+
+.input-id {
+  padding-left: 1rem;
+}
+
+.hidden {
+  display: none;
 }
