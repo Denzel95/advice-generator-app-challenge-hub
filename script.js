@@ -43,7 +43,6 @@ const renderData = async function (state = true, id) {
     if (state) data = await getAdvice();
     else data = await getAdvice(false, id);
 
-    console.log(data);
     paragraph.innerHTML = data.slip.advice;
     h1Id.innerHTML = `Advice #${data.slip.id}`;
   } catch (error) {
@@ -77,8 +76,6 @@ form.addEventListener("submit", function (e) {
   renderData(false, id);
   toggleHidden(form);
   TOOLTIP_STATE = false;
-
-  //   if (!tooltip.classList.contains("hidden")) tooltip.classList.remove("hidden");
 });
 
 // const requestAdviceById = async function (id) {};
