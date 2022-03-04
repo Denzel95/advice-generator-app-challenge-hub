@@ -9,10 +9,10 @@ This component is made by: [Denzel95](https://github.com/Denzel95) and [Blagoja9
 
 ### Made with:
 
--*HTML
--*CSS
--*VANILA JS
--*ADVICE API
+- HTML
+- CSS
+- VANILA JS
+- ADVICE API
 
 ### API WE USED
 [Advice Slip JSON API](https://api.adviceslip.com/)
