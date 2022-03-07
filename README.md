@@ -1,7 +1,7 @@
 # Frontend Mentor - Advice generator app
 
 ## LIVE SITE URL
-https://blagoja95.github.io/advice-generator-app-challenge-hub/
+https://denzel95.github.io/advice-generator-app-challenge-hub/
 
 ## Welcome! 👋
 
